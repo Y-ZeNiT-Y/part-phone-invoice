@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Executa quando você envia para a main
+    branches: [ main ] # Certifique-se de que sua branch se chama 'main'. Se for 'master', mude aqui.
 
 permissions:
   contents: read
@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Atualizado para v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Atualizado para v4
         with:
-          node-version: 18
+          node-version: 20 # Usando uma versão estável e atual do Node
           cache: 'npm'
 
       - name: Install dependencies
@@ -29,13 +29,13 @@ jobs:
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5 # Atualizado para v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3 # Atualizado para v3 (Correção do erro que você recebeu)
         with:
-          path: './dist' # Onde o Vite joga os arquivos prontos
+          path: './dist' # O Vite gera a pasta dist
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4 # Atualizado para v4
