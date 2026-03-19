@@ -168,7 +168,8 @@ const PrintLayout: React.FC<PrintLayoutProps> = ({ invoice, setView }) => {
         doc.text("Telefone: (047) 99670-6996", infoCenter, y + 16, { align: "center" });
         doc.setFontSize(8);
         doc.setFont("helvetica", "normal");
-        doc.text("Para garantia, remover qualquer resquício de cola", infoCenter, y + 20, { align: "center" });
+        doc.text("Para garantia, remover qualquer resquício de cola", infoCenter, y + 18, { align: "center" });
+        doc.setFontSize(6);
 
         y += headerHeight + 2;
 
