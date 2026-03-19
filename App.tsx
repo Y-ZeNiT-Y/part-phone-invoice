@@ -159,7 +159,7 @@ const PrintLayout: React.FC<PrintLayoutProps> = ({ invoice, setView }) => {
 
         // Info Empresa (Lado Direito)
        const infoCenter = margin + logoWidth + ((contentWidth - logoWidth) / 2);
-        doc.setFontSize(16);
+        doc.setFontSize(14);
         doc.text("PART-PHONE", infoCenter, y + 8, { align: "center" });
         doc.setFontSize(10);
         doc.setFont("helvetica", "normal");
