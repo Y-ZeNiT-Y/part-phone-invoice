@@ -160,15 +160,15 @@ const PrintLayout: React.FC<PrintLayoutProps> = ({ invoice, setView }) => {
         // Info Empresa (Lado Direito)
        const infoCenter = margin + logoWidth + ((contentWidth - logoWidth) / 2);
         doc.setFontSize(14);
-        doc.text("PART-PHONE", infoCenter, y + 8, { align: "center" });
+        doc.text("PART-PHONE", infoCenter, y + 7, { align: "center" });
         doc.setFontSize(10);
         doc.setFont("helvetica", "normal");
-        doc.text("Acessórios e Assistência Técnica", infoCenter, y + 13, { align: "center" });
+        doc.text("Acessórios e Assistência Técnica", infoCenter, y + 11, { align: "center" });
         doc.setFont("helvetica", "bold");
-        doc.text("Telefone: (047) 99670-6996", infoCenter, y + 18, { align: "center" });
+        doc.text("Telefone: (047) 99670-6996", infoCenter, y + 16, { align: "center" });
         doc.setFontSize(8);
         doc.setFont("helvetica", "normal");
-        doc.text("Para garantia, remover qualquer resquício de cola", infoCenter, y + 22, { align: "center" });
+        doc.text("Para garantia, remover qualquer resquício de cola", infoCenter, y + 20, { align: "center" });
 
         y += headerHeight + 2;
 
